@@ -5,7 +5,7 @@ import { useRef, useState, useTransition } from 'react';
 
 import { Button } from '../Button';
 import { CirclePlusIcon } from 'lucide-react';
-import { InputText } from '../Button/InputText';
+import { InputText } from '../InputText';
 
 export type TodoFormProps = {
   action: CreateTodoAction;
