@@ -1,8 +1,8 @@
-import { Todo, TodoPresenter } from "@/core/todo/schemas/todo.contract";
+import { Todo, TodoPresenter } from '@/core/todo/schemas/todo.contract';
 import { TodoRepository } from './todo.contract.repository';
 import { eq } from 'drizzle-orm';
-import { DrizzleDatabase } from "@/db/drizzle";
-import { todoTable } from "@/core/todo/schemas/drizzle-todo-table.schema";
+import { DrizzleDatabase } from '@/db/drizzle';
+import { todoTable } from '@/core/todo/schemas/drizzle-todo-table.schema';
 
 export class DrizzleTodoRepository implements TodoRepository {
   private readonly db: DrizzleDatabase;

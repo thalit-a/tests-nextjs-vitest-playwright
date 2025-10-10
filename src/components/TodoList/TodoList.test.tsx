@@ -23,18 +23,24 @@ describe('<TodoList /> (integration)', () => {
     });
 
     // espera os itens entrarem no estado pending
-    await waitFor(() => {
-      items.forEach(item => {
-        expect(item).toHaveClass(expectedDisabledCls);
-      });
-    }, { timeout: 2000 });
+    await waitFor(
+      () => {
+        items.forEach(item => {
+          expect(item).toHaveClass(expectedDisabledCls);
+        });
+      },
+      { timeout: 2000 },
+    );
 
     // espera os itens voltarem ao estado enabled
-    await waitFor(() => {
-      items.forEach(item => {
-        expect(item).toHaveClass(expectedEnabledCls);
-      });
-    }, { timeout: 2000 });
+    await waitFor(
+      () => {
+        items.forEach(item => {
+          expect(item).toHaveClass(expectedEnabledCls);
+        });
+      },
+      { timeout: 2000 },
+    );
   });
 
   test('deve desativar os botões da lista enquanto envia a action', async () => {
@@ -49,14 +55,20 @@ describe('<TodoList /> (integration)', () => {
     });
 
     // verifica se os botões ficam desativados
-    await waitFor(() => {
-      btns.forEach(btn => expect(btn).toBeDisabled());
-    }, { timeout: 2000 });
+    await waitFor(
+      () => {
+        btns.forEach(btn => expect(btn).toBeDisabled());
+      },
+      { timeout: 2000 },
+    );
 
     // verifica se os botões voltam a ficar ativos
-    await waitFor(() => {
-      btns.forEach(btn => expect(btn).toBeEnabled());
-    }, { timeout: 2000 });
+    await waitFor(
+      () => {
+        btns.forEach(btn => expect(btn).toBeEnabled());
+      },
+      { timeout: 2000 },
+    );
   });
 });
 

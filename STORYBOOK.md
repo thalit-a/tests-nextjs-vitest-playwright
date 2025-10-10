@@ -167,9 +167,7 @@ export function Button({
     props.className,
   );
 
-  return (
-    <button {...props} className={buttonClasses} />
-  );
+  return <button {...props} className={buttonClasses} />;
 }
 ```
 
